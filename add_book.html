@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Book</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #ffecd2, #fcb69f);
+            color: #333;
+        }
+        nav {
+            width: 100%;
+            padding: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #2c3e50;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        ul {
+            display: flex;
+            gap: 15px;
+            list-style: none;
+            font-size: 18px;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+        .container {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+        .input-group {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        label {
+            width: 100px;
+            font-weight: bold;
+            color: #333;
+        }
+        input {
+            width: 250px;
+            padding: 8px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            font-size: 16px;
+            cursor: pointer;
+            background: #e74c3c;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+            display: block;
+            text-align: center;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background: #c0392b;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <h1>Add Book</h1>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="display_books.php">View Books</a></li>
+            
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="form-box">
+            <h1>Add a New Book</h1>
+            <form action="add_book.php" method="get">
+                <div class="input-group">
+                    <label for="BookName">Book Name:</label>
+                    <input type="text" name="BookName" id="BookName" placeholder="Enter book name">
+                </div>
+                <div class="input-group">
+                    <label for="Author">Author:</label>
+                    <input type="text" name="Author" id="Author" placeholder="Enter author name">
+                </div>
+                <div class="input-group">
+                    <label for="Price">Price:</label>
+                    <input type="text" name="Price" id="Price" placeholder="Enter book price">
+                </div>
+                <div class="input-group">
+                    <label for="Quantity">Quantity:</label>
+                    <input type="text" name="Quantity" id="Quantity" placeholder="Enter quantity">
+                </div>
+                <div class="input-group">
+                    <label for="Genre">Genre:</label>
+                    <input type="text" name="Genre" id="Genre" placeholder="Enter genre">
+                </div>
+                <input type="submit" value="Add Book" class="submit-btn">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
